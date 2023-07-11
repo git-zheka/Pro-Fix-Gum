@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Poppins:wght@200&display=swap');
+
+.section3 {
+    z-index: 10;
+}
+
+.advantages {
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 8%;
+}
+
+.advantagesBox {
+    background-color: #24262D;
+    color: #fff;
+    box-shadow: 0px 0px 15px 5px #54B561;
+    width: 650px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.advantagesText {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 21px;
+}
+
+.advantagesText img {
+    margin-left: 30px;
+} 
+
+.advantagesInfo {
+    width: 100%;
+    background-color: #545B69;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 20px;
+}
+
+.advantagesBox:hover .advantagesInfo {
+    display: block;
+}
+
+.advantagesBox h4{
+    width: 95%;
+}
+
+.flex {
+    display: flex;
+    margin-top: 5%;
+}
+
+.flex .advantagesBox:nth-child(2) {
+    margin-left: 5%;
+}
+
+.box2 {
+    width: 261px;
+}
+
+.box3 {
+    width: 308px;
+}
+
+.box4 {
+    width: 279px;
+}
+
+.box5 {
+    width: 333px;
+}
+
+.section_left_right {
+    display: flex;
+}
+
+.Longbord{
+    width: 30%;
+}
+
+.Longbord img{
+    width: 80%;
+}

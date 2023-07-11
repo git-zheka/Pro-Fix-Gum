@@ -1,0 +1,50 @@
+.section4 {
+    margin-top: 10%;
+}
+
+.betterBox {
+    width: 70%;
+    color: #fff;
+    margin: -4% auto;
+}
+
+.section4 .betterBox:nth-child(2) {
+    margin-top: 5%;
+}
+
+.betterInfo {
+    padding: 20px 60px;
+    background-color: #54B561;
+    border-radius: 40px;
+}
+
+
+.betterNumber {
+    border: solid 10px #54B561;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    background-color: #24262D;
+    position: relative;
+    top: 70px;
+    left: -30px;
+    font-weight: 700;
+}
+
+.betterInfo h4 {
+    width: 100%;
+    color: #fff;
+    font-size: 160%;
+}
+
+.betterInfo h5 {
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 120%;
+}
+
+

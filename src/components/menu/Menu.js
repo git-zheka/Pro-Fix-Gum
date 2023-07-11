@@ -17,6 +17,7 @@ function Menu() {
   };
 
   return (
+    <>
     <nav>
       <div className={MenuCSS.Logo}>
         <img src={Logo} alt="Logo" />
@@ -37,6 +38,8 @@ function Menu() {
           Open
         </button>
     </nav>
+    
+    </>
   );
 }
 

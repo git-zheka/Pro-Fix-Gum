@@ -1,0 +1,42 @@
+.slider {
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .img {
+    text-align: center;
+    line-height: 300px;
+    display: none;
+  }
+  
+  .img.curry {
+    display: block;
+  }
+  
+  .slide_btn {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+  }
+  
+  
+  .n {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    margin-left: 5px;
+  }
+  
+  .slider_show {
+    position: absolute;
+    top: 55%;
+    z-index: -100;
+    left: 56.5%;
+  }

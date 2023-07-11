@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.App {
+    max-width: 1248px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Redner {
+    background-color: #3B404A;
+}
