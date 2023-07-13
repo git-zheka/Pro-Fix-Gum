@@ -18,7 +18,7 @@ function Menu() {
 
   return (
     <>
-    <nav>
+    <nav className={MenuCSS.Nav}>
       <div className={MenuCSS.Logo}>
         <img src={Logo} alt="Logo" />
       </div>

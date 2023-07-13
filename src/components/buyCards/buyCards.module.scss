@@ -1,0 +1,141 @@
+.BuyCards {
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+}
+
+.ChooseCards {
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+}
+
+.ChooseCards h1{
+    font-weight: 900;
+    color:#3B404A;
+}
+
+.Choose {
+    background-color: #3B404A;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-left: 10px;
+    box-shadow: 0px 4px 4px 0px #000 inset;
+}
+
+.CardsConteiner {
+    display: grid;
+    grid-template-columns: repeat(4, 244px);
+    justify-content: center;
+    grid-column-gap: 30px;
+    margin-top: 30px;
+    grid-auto-rows: minmax(0, auto);
+    
+}
+
+.Card {
+    background-color: #616670;
+    box-shadow: 0px 0px 10px 4px #52B563;
+    padding: 20px;
+}
+
+.Card h2{
+    color: #52B563;
+    font-size: 20px;
+}
+
+.Price {
+    align-items: center;
+}
+
+.Price p1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.Price p2 {
+    color: #52B563;
+    font-weight: 300;
+}
+
+.btnBuy {
+    position: relative;
+    background-color: #52B563;
+    color: #fff;
+    border: 2px solid #52B563;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: 900;
+    margin-left: 14%;
+    margin-top: 20px;
+    top: -10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnBuy:hover {
+    background-color: #616670;
+    transition: 0.2s;
+}
+
+.CardImg {
+    width: 100%;
+    height: 250px;
+}
+
+.CardText {
+    width: 100%;
+    height: 50%;
+}
+
+.Card img {
+    width: 100%;
+    height: 100%;
+}
+
+.More {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 40px 0;
+    
+}
+
+.btnMore {
+    padding: 10px 20px;
+    display: flex;
+    background-color: #52B563;
+    width: 14%;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    box-shadow: -1px 1px 4px 0px #000000 inset;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.moretext{
+    font-weight: 900;
+    color: #fff;
+}
+
+.arrow {
+   background-color: #fff;
+   border-radius: 50px;
+   width: 35px;
+   height: 35px;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 15px;
+}
+
+
+.btnMore:hover {
+    box-shadow: -1px 1px 4px 0px #000000;
+    transition: 0.5s;
+}

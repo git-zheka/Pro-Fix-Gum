@@ -12,7 +12,7 @@
 }
 
 .HeaderText {
-  z-index: 99;
+  z-index: 98;
   position: relative;
 }
 
@@ -20,6 +20,7 @@
   display: block;
   width: 70%;
   margin: 14% 8%;
+  z-index: 0;
 }
 
 .headerLeft h4 {
@@ -69,6 +70,7 @@ a .button_order_call:hover {
 
 .imgHeader img {
   width: 700px;
+  z-index: 0;
 }
 
 
@@ -94,7 +96,7 @@ a .button_order_call:hover {
 
 .HeaderText h4 {
     width: 100%;
-    font-size: 160%;
+    font-size: 144%;
 }
 
 a .button_order_call {
@@ -104,8 +106,8 @@ a .button_order_call {
 }
 
 .HeaderText h6 {
-    width: 70%;
-    font-size: 100%;
+    width: 90%;
+    font-size: 90%;
     font-weight: 300;
     color: #fff;
 }
@@ -117,45 +119,19 @@ a .button_order_call {
     z-index: 0;
 }
 
-.imgHeader img{
-  left: 0%;
-  top: 0%;
+.imgHeader {
+  left: -10%;
+  top: 6%;
   width: 100%;
 }
 
+.imgHeader img{
+  width: 100%;
+}
+
+
 .header-right {
-    width: 100%;
+    display: none;
 }
-
-.header-right .slider img{
-    width: 25%;
-    height: auto;
-}
-
-.slider {
-    width: 100%;
-}
-
-.slide_btn {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.n {
-    justify-content: center;
-    border-radius: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    margin-left: 5px;
-    margin-top: -40px;
-  }
-
-  .header-right img {
-    width: 60%;
-  }
-
-
 
 }

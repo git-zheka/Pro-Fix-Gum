@@ -12,13 +12,12 @@ a {
   width: 100%;
 }
 
-
-
 nav {
   background-color: #717885;
   display: flex;
   align-items: center;
   width: 100%;
+  z-index: 100;
 }
 
 .Logo {
@@ -33,6 +32,7 @@ nav {
   align-items: center;
   text-align: right;
   justify-content: end;
+  z-index: 99;
 }
 
 .Menu ul{
@@ -78,5 +78,10 @@ nav {
     left: 80%;
     top: 5%;
   }
+
+  
+.Nav {
+  z-index: 100;
+}
 
 }

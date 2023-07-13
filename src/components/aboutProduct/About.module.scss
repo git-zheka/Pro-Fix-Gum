@@ -89,3 +89,96 @@
 .Longbord img{
     width: 80%;
 }
+
+
+
+
+
+@media screen and (max-width: 900px)  {
+    .advantages {
+        width: 90%;
+        margin-top: 40%;
+        margin-left: 5%;
+    }
+
+    .advantagesBox {
+        width: 95%;
+        margin-top: 10%;
+    }
+
+    .advantagesText {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .advantagesText h4{
+        font-size: 100%;
+    }
+
+    .advantagesText img {
+        margin-left: 0px;
+        align-self: flex-end;
+    } 
+
+    .advantagesInfo {
+        width: 100%;
+        background-color: #545B69;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    .advantagesBox:hover .advantagesInfo {
+        display: block;
+    }
+
+    .flex {
+        display: block;
+        margin-top: 0%;
+    }
+
+    .flex .advantagesBox:nth-child(2) {
+        margin-left: 0%;
+    }
+
+    .box2 {
+        width: 95%;
+    }
+
+    .box3 {
+        width: 95%;
+    }
+
+    .box4 {
+        width: 95%;
+    }
+
+    .box5 {
+        width: 95%;
+    }
+
+    .section_left_right {
+        display: block;
+    }
+
+
+    .Longbord{
+        margin-top:-550px;
+        z-index: -99;
+        margin-left: -1%;
+        width: 100%;
+    }
+
+    .Longbord img {
+        width: 99%;
+    }
+
+    .up{
+        margin-bottom: 4%;
+}
+}
+
+
+

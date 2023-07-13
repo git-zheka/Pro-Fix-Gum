@@ -1,7 +1,23 @@
 .h1 {
+    width: 98%;
     position: relative;
-    left: 8%;
-    top: 100px;
+    padding-left: 8%;
+    top: 0px;
     color:#fff;
     display: inline-block;
+}
+
+
+@media screen and (max-width: 900px) 
+{
+    .h1 {
+        width: 98%;
+        position: relative;
+        padding-left: 8%;
+        top: 100px;
+        color:#fff;
+        display: inline-block;
+        font-size: 28px;
+    }
+
 }

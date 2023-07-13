@@ -40,3 +40,16 @@
     z-index: -100;
     left: 56.5%;
   }
+
+
+
+
+@media screen and (max-width: 900px) 
+{
+
+.slider {
+
+    display: none;
+}
+
+}

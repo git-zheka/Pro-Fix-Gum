@@ -6,16 +6,20 @@ import Using from './components/using/Using'
 import StyleCSS from './style.module.scss'
 import WhyUs from "./components/whyus/WhyUs";
 import Footer from "./components/footer/Footer";
+import BuyCards from "./components/buyCards/BuyCards";
+import MoreInfo from "./components/moreInfo/MoreInfo";
 
 function App() {
   return (
     <div className={StyleCSS.App}>
-        <Menu />
+        {/* <Menu />
         <Header />
+        <BuyCards />
         <About />
         <WhyUs />
         <Using />
-        <Footer />
+        <Footer /> */}
+        <MoreInfo />
     </div>
   );
 }

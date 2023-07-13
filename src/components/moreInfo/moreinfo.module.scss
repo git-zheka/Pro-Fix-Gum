@@ -1,0 +1,77 @@
+.MoreInfo {
+    display: grid;
+    grid-template-areas: 
+    'VisualModel DetailsInfo'
+    'Description Description';
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    grid-template-columns: 50% 50%;
+}
+
+.VisualModel {
+}
+
+.DetailsInfo {
+
+}
+
+.DetailsInfo h1, h3{
+    color:#52B563;
+}
+
+.DetailsInfo p1{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.DetailsInfo p2{
+    color:#52B563;
+    font-weight: 900;
+}
+
+.DetailsInfo h4{
+    color:#fff;
+    font-weight: 400;
+}
+
+.AddToBuy {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.btnBuy {
+    background-color: #52B563;
+    padding: 5px 30px;
+    border: 2px solid #52B563;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 900;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px #000000;
+}
+
+.btnBuy:hover {
+    background-color: #3B404A;
+    transition: 0.2s;
+    box-shadow: 0px 0px 4px 0px #52B563 inset;
+}
+
+
+.AddToBuy p {
+    margin-left: 3%;
+    font-size: 16px;
+    font-weight: 100;
+    color:#52B563;
+}
+
+
+.Description {
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.Description h2{
+    color: #52B563;
+}

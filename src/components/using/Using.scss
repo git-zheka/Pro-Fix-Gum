@@ -12,3 +12,22 @@
     margin-left: 0;
 }
 
+@media screen and (max-width: 900px) 
+{
+    .using {
+        width: 100%;
+        margin: 30% auto;
+        display: block;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .using img {
+        margin-left: -1%;
+        width: 100%;
+    }
+    
+    .using img:nth-child(1) {
+        margin-left: 0;
+    }
+}

@@ -48,3 +48,41 @@
 }
 
 
+
+
+
+
+@media screen and (max-width: 900px) 
+{
+    .betterBox {
+        width: 90%;
+        
+    }
+    
+    .betterInfo {
+        padding: 20px 30px;
+    }
+    
+    .section4 .betterBox:nth-child(1) {
+        margin-top: 80px;
+    }
+
+    .betterNumber {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        top: 50px;
+        left: 260px;
+        font-weight: 700;
+    }
+    
+    .betterInfo h4 {
+        font-size: 140%;
+    }
+    
+    .betterInfo h5 {
+        font-size: 100%;
+    }
+    
+
+}
