@@ -1,0 +1,83 @@
+.Basket {
+    background-color: #616670;
+    width: 30%; 
+    float: right;
+    height: 100vh;
+    padding: 40px;
+} 
+
+.NameAndClose {
+    padding: 40px 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.NameAndClose img {
+    width: 20px;
+    margin-left: 60%;
+}
+
+.Goods {
+    display: flex;
+    width: 100%;
+    background-color: #3B404A;
+    border-radius: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.GoodsImg {
+    width: 40px;
+    height: 40px;
+}
+
+.GoodsImg img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.GoodsName {
+    width: 50%;
+    padding: 0px 10px;
+}
+
+.GoodsName h6{
+    color: #54B561
+}
+
+.GoodsCount {
+    width: 30%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 30px 20px;
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.GoodsCount .TakeAway{
+    padding-bottom: 10px;
+}
+
+.GoodsCount img{
+    width: 50%;
+}
+
+.GoodsDalete {
+    width: 10%;
+    margin-top: -20px;
+}
+
+.GoodsDalete img{
+    width: 50%;
+}
+
+.Add {
+    background-color: #54B561;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}

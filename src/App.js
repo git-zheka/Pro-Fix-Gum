@@ -8,6 +8,7 @@ import WhyUs from "./components/whyus/WhyUs";
 import Footer from "./components/footer/Footer";
 import BuyCards from "./components/buyCards/BuyCards";
 import MoreInfo from "./components/moreInfo/MoreInfo";
+import Basket from "./components/basket/Basket";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <WhyUs />
         <Using />
         <Footer /> */}
-        <MoreInfo />
+        {/* <MoreInfo /> */}
+
+        <Basket />
     </div>
   );
 }
