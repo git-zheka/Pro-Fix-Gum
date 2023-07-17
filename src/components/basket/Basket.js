@@ -1,53 +1,72 @@
-import StyleCSS from './basket.module.scss' 
+import StyleCSS from './basket.module.scss';
 import React, { useState } from 'react';
 
-import Close from '../../media/Close.svg'
-import img from '../../media/TreangleSlider.svg'
-
-import Add from '../../media/Add.svg'
-import TakeAway from '../../media/TakeAway.svg'
+import Close from '../../media/Close.svg';
+import img from '../../media/TreangleSlider.svg';
 
 import { useEffect } from 'react';
+import BoxGoods from './components/BoxGoods';
 
-export default function Basket() {
-    const [count, setCount] = useState(10);
+import { connect } from 'react-redux';
 
-    const increaseCount = () => {
-        setCount(count + 1);
-      };
-    
-      const decreaseCount = () => {
-        if (count > 10) {
-          setCount(count - 1);
-        }
-      };
+const Basket = (props) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const initialGoods = [
+    { image: img, name: 'Трикутник', price: '0.80', quantity: 10 },
+    { image: img, name: 'Трикутник', price: '0.80', quantity: 10 },
+  ];
+
+  useEffect(() => {
+    const initialPrice = initialGoods.reduce(
+      (acc, curr) => acc + parseFloat(curr.price) * curr.quantity,
+      0
+    );
+    setTotalPrice(initialPrice);
+  }, []);
 
   return (
     <>
-        <div className={StyleCSS.Basket}>
-            <div className={StyleCSS.NameAndClose}>
-                <h2>Корзина</h2>
-                <img src={Close} />
-            </div>
-                
-            <div className={StyleCSS.Goods}>
-                <div className={StyleCSS.GoodsImg}>
-                    <img src={img} />
-                </div>
-                <div className={StyleCSS.GoodsName}>
-                    <h5> Трикутник </h5>
-                    <h6> 0.75 грн </h6>
-                </div>
-                <div className={StyleCSS.GoodsCount}>
-                    <div className={StyleCSS.Add} onClick={increaseCount}><img src={Add} /></div>
-                    <div className={StyleCSS.Number}><h3>{count}</h3></div>
-                    <div className={StyleCSS.TakeAway} onClick={decreaseCount}><img src={TakeAway} /></div>
-                </div>
-                <div className={StyleCSS.GoodsDalete}>
-                    <img src={Close}/>
-                </div>
-            </div>
+      <div className={StyleCSS.Basket}>
+        <div className={StyleCSS.NameAndClose}>
+          <h2>Корзина</h2>
+          <img src={Close} alt="Close" onClick={props.closeBasket} />
         </div>
+        <div className={StyleCSS.ScrollItem}>
+          {initialGoods.map((goods, index) => (
+            <BoxGoods
+              key={index}
+              img={goods.image}
+              name={goods.name}
+              price={goods.price}
+              quantity={goods.quantity}
+              updateTotalPrice={(price) =>
+                setTotalPrice((prevTotalPrice) => prevTotalPrice + price)
+              }
+            />
+          ))}
+        </div>
+        <div className={StyleCSS.TotalPrice}>
+          <div className={StyleCSS.PrictText}>
+            <h2>Ціна разом</h2>
+            <h1>${totalPrice.toFixed(2)}</h1>
+          </div>
+          <div className={StyleCSS.Confirm} onClick={props.openForm}>
+            Замовити
+          </div>
+        </div>
+      </div>
     </>
   );
-}
+};
+
+const mapStateToProps = (state) => ({
+  isOpen: state.isOpen,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  closeBasket: () => dispatch({ type: 'CLOSE' }),
+  openForm: () => dispatch({ type: 'OPEN_FORM' }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket);

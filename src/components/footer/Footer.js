@@ -33,14 +33,14 @@ export default function Footer() {
         <footer id="form">
             <Title title="Zostaw swoje dane tutaj, oddzwonimy!" />
             <div className={FooterCSS.form_and_robot}>
-                <form onSubmit={sender}>
-                    <label for="name">Imię:</label>
-                    <input type="text" id="name" name="name" placeholder="Wprowadź swoje imię" required />
+                <form className={FooterCSS.footerForm} onSubmit={sender}>
+                    <label className={FooterCSS.labels} for="name">Imię:</label>
+                    <input className={FooterCSS.inputs} type="text" id="name" name="name" placeholder="Wprowadź swoje imię" required />
                 
-                    <label for="phone">Numer telefonu:</label>
-                    <input type="text" id="phone" name="phone" placeholder="Wprowadź numer telefonu" pattern="[4][8][0-9]{8}" required />
+                    <label className={FooterCSS.labels} for="phone">Numer telefonu:</label>
+                    <input className={FooterCSS.inputs} type="text" id="phone" name="phone" placeholder="Wprowadź numer telefonu" pattern="[4][8][0-9]{8}" required />
                 
-                    <label for="question">Pytanie:</label>
+                    <label className={FooterCSS.labels} for="question">Pytanie:</label>
                     <textarea id="question" name="question" placeholder="Zadaj swoje pytanie"></textarea>
                 
                     <input type="submit" value="Wyślij" />

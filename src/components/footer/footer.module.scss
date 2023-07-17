@@ -3,7 +3,7 @@ footer {
     border-radius: 50px;
 }
 
-form {
+.footerForm {
     margin-left: 10%;
     margin-top: 10%;
     background-color: #fff;
@@ -14,13 +14,13 @@ form {
     width: 60%;
   }
 
-  label {
+  .labels {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
   }
 
-  input[type=text], textarea {
+  .inputs input[type=text], textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -35,7 +35,7 @@ form {
     resize: vertical;
   }
 
-  input[type=submit] {
+  .inputs input[type=submit] {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;

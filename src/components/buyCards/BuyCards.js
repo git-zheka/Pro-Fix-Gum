@@ -7,7 +7,36 @@ import Long from '../../media/LongbordSlider.svg'
 import Card from './components/Card';
 import Arrow from '../../media/Arrow.svg'
 
+import { apiURL } from '../../api';
+import { useEffect, useState } from 'react';
+
 export default function BuyCars() {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch(apiURL, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Помилка при завантажені.');
+        }
+      })
+      .then(data => {
+        setProducts(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+
   return (
     <>
        <Title title='Asortyment' />
@@ -19,21 +48,11 @@ export default function BuyCars() {
             </div>
 
             <div className={BuyCards.CardsConteiner}>
-              <Link to='/'>
-                <Card h2='Трикутник з круглими кутами' img={Treeangle} price='0.75' />
-              </Link>
-
-              <Link to='/'>
-                <Card h2='Трикутник з круглими кутами' img={Long} price='0.75' />
-              </Link>
-
-              <Link to='/'>
-                <Card h2='Трикутник з круглими кутами' img={Treeangle} price='0.75' />
-              </Link>
-
-              <Link to='/'>
-                <Card h2='Трикутник ' img={Long} price='0.75' />
-              </Link>
+            {products.slice(-4).map((product) => (
+                <Link to={`/more/${product.id}`} key={product.id}>
+                  <Card h2={product.name} img={product.image} price={product.price} />
+                </Link>
+              ))}
             </div>
 
             <div className={BuyCards.More}>

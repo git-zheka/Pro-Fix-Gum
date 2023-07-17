@@ -1,0 +1,58 @@
+.BlockBuy {
+    background-color: #616670;
+    width: 30%; 
+    float: right;
+    height: 100vh;
+    padding: 40px;
+    display: block;
+    position: absolute;
+    z-index: 1001;
+    color: #fff
+}
+
+.labels {
+    color: #52B563;
+}
+
+.inputs {
+    width: 90%;
+    background-color: #fff;
+    border: #fff solid 3px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.btnOrder {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #52B563;
+    border: #52B563 2px solid;
+    color: #fff;
+    font-weight: 900;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btnOrder:hover {
+    background-color: #616670;
+    transition: 0.2s;
+
+}
+
+.inputs:focus {
+    outline: none;
+    border-color: #52B563;
+    box-shadow: 0 0 5px #52B563;
+}
+
+.Navigation {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.Navigation img {
+    width: 20px;
+    margin-left: 50%;
+}
+
