@@ -8,11 +8,12 @@
 
 .section3 {
     z-index: 10;
+    align-items: center;
 }
 
 .advantages {
     width: 60%;
-    margin-top: 15%;
+    margin-top: 8%;
     margin-left: 8%;
 }
 
@@ -22,7 +23,7 @@
     box-shadow: 0px 0px 15px 5px #54B561;
     width: 650px;
     position: relative;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
 }
 
 .advantagesText {
@@ -84,10 +85,11 @@
 
 .Longbord{
     width: 30%;
+    margin-top: -5%;
 }
 
 .Longbord img{
-    width: 80%;
+    width: 70%;
 }
 
 

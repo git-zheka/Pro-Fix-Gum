@@ -9,6 +9,9 @@ import BoxGoods from './components/BoxGoods';
 
 import { connect } from 'react-redux';
 
+
+
+
 const Basket = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
 

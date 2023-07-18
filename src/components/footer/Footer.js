@@ -13,7 +13,6 @@ export default function Footer() {
         var phone = document.getElementById("phone").value;
         var question = document.getElementById("question").value;
 
-        // створюємо повідомлення, яке будемо відправляти
         var message = "%0AІм'я: " + name + "%0AНомер телефону: " + phone + "%0AПитання: " + question;
 
         fetch('https://api.telegram.org/bot6125593105:AAHVGdFE3ZAxganRkh4h_iMitU3fdp9XENg/sendMessage?chat_id=-811741911&text=' + message)

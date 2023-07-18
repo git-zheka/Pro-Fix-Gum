@@ -10,7 +10,7 @@ export default function Card(props) {
                     <div className={BuyCards.CardText}>
                       <h2>{props.h2}</h2>
                       <div className={BuyCards.Price}> 
-                          <p1>{props.price}</p1><p2>грн</p2>
+                          <div><p1>{props.price}</p1><p2>грн</p2></div>
                           <button className={BuyCards.btnBuy}>Купити</button>
                       </div>
                       <p3>Є у наявності</p3>

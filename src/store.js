@@ -22,9 +22,21 @@ const isAdressReducer = (state = false, action) => {
   }
 };
 
+const isProductsOpen = (state = false, action) => {
+  switch (action.type) {
+    case 'OPEN_PRODUCTS':
+      return true;
+    case 'CLOSE_PRODUCTS':
+      return false;
+    default:
+      return state;
+  }
+};
+
 const rootReducer = combineReducers({
   isOpen: isBasketReducer,
   isOpenForm: isAdressReducer,
+  isProducts: isProductsOpen,
 });
 
 const store = createStore(rootReducer);

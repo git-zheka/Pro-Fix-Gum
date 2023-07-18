@@ -21,7 +21,7 @@ function Menu(props) {
     <>
       <nav className={MenuCSS.Nav}>
         <div className={MenuCSS.Logo}>
-          <img src={Logo} alt="Logo" />
+          <Link to='/'><img src={Logo} alt="Logo" /></Link>
         </div>
         <div className={MenuCSS.Menu} id="Menu">
           <button onClick={Close} className={MenuCSS.close_btn} id="CloseBtn">
