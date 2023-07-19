@@ -2,10 +2,15 @@ import StyleCSS from './buyforms.module.scss'
 import Close from '../../media/Close.svg'
 import { connect } from 'react-redux';
 
+import { useSelector } from 'react-redux';
+
 function BuyForms(props) {
+
+  const isOpenForm = useSelector(state => state.isOpenForm);
+
   return (
     <>
-        <div className={StyleCSS.BlockBuy}>
+        <div className={`${StyleCSS.BlockBuy} ${isOpenForm ? StyleCSS.active : StyleCSS.inactive}`}>
             <div className={StyleCSS.Navigation}><h1>Adres</h1> <img src={Close} onClick={props.Close} /></div>
             
             <form className={StyleCSS.BuyForms}>

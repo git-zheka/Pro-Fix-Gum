@@ -15,16 +15,26 @@ export default function App() {
   const isOpenForm = useSelector(state => state.isOpenForm);
   const isOpenProducts = useSelector(state => state.isProducts);
 
+  const body = document.querySelector('body');
+
+  if (isOpenProducts == true) {
+    body.style.overflowY = 'hiden';
+  } else {
+    body.style.overflowY = 'scroll';
+  }
+
   return (
   <>
         {isOpen ? <Basket /> : null}
         {isOpenForm ? <BuyForms /> : null}
         {isOpenProducts ? <Products /> : null }
-        <Menu />
-        <div className={StyleCSS.App}>
-          <Routes />
-          <Footer />
-        </div>
+        <div className={`${isOpen ? StyleCSS.Blur : ''}`}></div>
+          <Menu />
+          <div className={StyleCSS.App}>
+            <Routes />
+            <Footer />
+          </div>
+        
     </>
   );
   

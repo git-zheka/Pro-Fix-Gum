@@ -2,14 +2,17 @@
 
 .Basket {
     background-color: #616670;
-    width: 30%; 
+    width: 30%;
     float: right;
     height: 100vh;
     position: fixed;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     z-index: 1000;
-} 
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
 .ScrollItem {
     overflow-y: scroll;
@@ -101,7 +104,7 @@
 
 .TotalPrice {
     position: fixed;
-    width: 30%;
+    width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 10px 40px;
@@ -138,6 +141,14 @@
     transition: 0.2s;
 }
 
+.Basket.active {
+    animation-name: slideIn;
+}
+
+.Basket.inactive {
+    animation-name: slideOut;
+}
+
 @media screen and (max-width: 900px)  { 
     .Basket {
         background-color: #616670;
@@ -154,3 +165,26 @@
         width: 100%;
     }
 }
+
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }

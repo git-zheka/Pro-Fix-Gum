@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Close from '../../media/Close.svg'
 
+
+import { useSelector } from 'react-redux';
+
 function Products(props) {
   const [products, setProducts] = useState([]);
 
@@ -31,9 +34,12 @@ function Products(props) {
       });
   }, []);
 
+  const isOpenProducts = useSelector(state => state.isProducts); 
+  console.log(isOpenProducts)
+
   return (
     <>
-      <div className={styleCSS.Products}>
+      <div className={`${styleCSS.Products} ${isOpenProducts ? styleCSS.active : styleCSS.inactive}`}>
         <div className={styleCSS.head}>
           <div><h1>Asortyment</h1></div>
           <div className={styleCSS.Close}><img src={Close} onClick={props.closeProducts} /></div>
@@ -43,7 +49,6 @@ function Products(props) {
             <Box h2={product.name} img={product.image} price={product.price} />
           </Link>
         ))}
-        
       </div>
     </>
   );

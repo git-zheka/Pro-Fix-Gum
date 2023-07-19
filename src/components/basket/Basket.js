@@ -9,11 +9,16 @@ import BoxGoods from './components/BoxGoods';
 
 import { connect } from 'react-redux';
 
-
+import { useSelector } from "react-redux"
 
 
 const Basket = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
+  const isOpen = useSelector(state => state.isOpen);
+
+
+  console.log(isOpen);
+
 
   const initialGoods = [
     { image: img, name: 'Трикутник', price: '0.80', quantity: 10 },
@@ -30,7 +35,7 @@ const Basket = (props) => {
 
   return (
     <>
-      <div className={StyleCSS.Basket}>
+        <div className={`${StyleCSS.Basket} ${isOpen ? StyleCSS.active : StyleCSS.inactive}`}>
         <div className={StyleCSS.NameAndClose}>
           <h2>Корзина</h2>
           <img src={Close} alt="Close" onClick={props.closeBasket} />

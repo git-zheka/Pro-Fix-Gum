@@ -19,11 +19,12 @@ export default function MoreInfo() {
           if (response.ok) {
             return response.json();
           } else {
-            throw new Error('Помилка при завантажені.');
+            throw new Error('Помилка при завантаженні.');
           }
         })
         .then(data => {
             setProduct(data);
+            window.scrollTo(0, 0); // Прокрутити сторінку вгору
         })
         .catch(error => {
           console.error(error);

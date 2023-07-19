@@ -48,8 +48,12 @@
 {
 
 .slider {
-
     display: none;
 }
+
+.slide_btn {
+  display: none;
+}
+
 
 }

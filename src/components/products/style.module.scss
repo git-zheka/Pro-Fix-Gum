@@ -13,6 +13,9 @@
     padding: 40px;
     overflow-y: scroll;
     font-family: 'Poppins', sans-serif;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .head {
@@ -104,6 +107,18 @@
     color: #fff;
 }
 
+
+
+.Products.active {
+    animation-name: slideIn;
+}
+
+.Products.inactive {
+    animation-name: slideOut;
+}
+
+
+
 @media screen and (max-width: 900px)  {
     .Products {
         grid-template-columns: repeat(2, 1fr);
@@ -167,3 +182,27 @@
         width: 20px;
     }
 }
+
+
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: scale(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(100%);
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+        opacity: 0;
+        transform: scale(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(0%);
+      }
+  }
