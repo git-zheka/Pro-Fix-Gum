@@ -37,18 +37,10 @@ function Menu(props) {
           <img src={CloseImg} />
           </div>
           <ul>
-            <li>
-              <Link to="/">Товар</Link>
-            </li>
-            <li>
-              <Link to="/">Про товар</Link>
-            </li>
-            <li>
-              <Link to="/">Чому ми!?</Link>
-            </li>
-            <li>
-              <Link to="/">Контакти</Link>
-            </li>
+            <li><Link to="/">Dobra</Link></li>
+            <li><Link to="/">O produkcie</Link></li>
+            <li><Link to="/">Dlaczego my!?</Link></li>
+            <li><Link to="/">Łączność</Link></li>
           </ul>
         </div>
         
@@ -59,6 +51,11 @@ function Menu(props) {
 
         <div onClick={Open} className={MenuCSS.open_btn} id="OpenBtn">
           <img src={Burger} />
+        </div>
+
+        <div className={MenuCSS.authorization}>
+          <div className={MenuCSS.login}><Link to='/login'> Zalogować się </Link></div>
+          <div className={MenuCSS.singUp}><Link to='/registration'> Zapisać się </Link></div>
         </div>
       </nav>
     </>

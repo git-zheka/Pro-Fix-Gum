@@ -20,7 +20,7 @@ nav {
   z-index: 998;
   font-family: 'Jost', sans-serif;
   display: grid;
-  grid-template-columns:1fr 1fr 0.5fr;
+  grid-template-columns: repeat(4,auto);
   position: fixed;
 }
 
@@ -85,7 +85,29 @@ nav {
   top: -10px;
 }
 
+.authorization {
+  align-items: center;
+  color:#fff;
+  display: flex;
+  cursor: pointer;
+}
 
+.singUp {
+  background-color: #54B561;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+
+.login {
+  border-radius: 2px #fff solid;
+  padding: 5px 20px;
+}
+
+.login a{
+  color: #54B561;
+}
 
 @media screen and (max-width: 900px) {
 

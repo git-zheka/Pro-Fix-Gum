@@ -7,6 +7,9 @@ import Using from "./components/using/Using";
 import WhyUs from "./components/whyus/WhyUs";
 import Header from './components/header/Header'
 import About from './components/aboutProduct/About'
+import Admin from "./components/Admin/Admin";
+import Login from "./components/login/Login";
+import Registration from "./components/registration/Registration";
 
 
 export default function Rout() {
@@ -14,6 +17,9 @@ export default function Rout() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/more/:id" element={<MoreInfo />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registration" element={<Registration />} />
     </Routes>
   );
 }

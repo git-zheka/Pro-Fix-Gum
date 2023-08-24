@@ -1,0 +1,82 @@
+.Reg {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.RegBox {
+    margin-top: 5%;
+    padding: 30px;
+    width: 40%;
+    background-color: #717885;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 4px #52B563;
+}
+
+.Inputs {
+    width: 90%;
+    display: grid;
+}
+
+.RegBox h2 {
+    color: #52B563;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.RegBox lable{
+    text-align: left;
+}
+
+.Inputs .inputReg {
+    width: 100%;
+    border-radius: 20px;
+    border: 0px;
+    padding: 10px;
+    font-size: 14px; 
+    margin-bottom: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.inputReg:focus {
+    outline: none;
+    border-color: #52B563;
+    box-shadow: 0 0 2px 2px #52B563;
+}
+
+
+.btnReg {
+    width: 90%;
+    background-color: #52B563;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 14%;
+    border: solid 2px #52B563;
+    transition: 0.2s;
+}
+
+.btnReg:hover {
+    background-color: #717885;
+    border-radius: solid 2px #52B563;
+    box-shadow: 0px 0px 6px 0px #52B563;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+
+.RegBox p {
+    text-align: center;
+}
+
+.RegBox p a {
+    color:#52B563;
+}
+
+p1 {
+    color: red;
+}
