@@ -1,10 +1,8 @@
 import styleCSS from './style.module.scss'
 import { useState, useEffect } from 'react';
 
-import Title from '../title/Title'
-import {Link} from 'react-router-dom'
+import NavBar from './NavBar'
 
-import { apiURL } from '../../api';
 
 export default function Admin() {
   const [products, setProducts] = useState([]);
@@ -33,13 +31,13 @@ export default function Admin() {
 
   return (
     <>
-       <section className={styleCSS.NavBar}>
-        <h1>Адмін меню</h1>
-            <ul className={styleCSS.NavBarUl}>
-                <li><Link to=''> Усі замовлення </Link></li>
-                <li><Link to=''> Усі користувачі </Link></li>
-                <li><Link to=''> Весь товар </Link></li>
-            </ul>
+       <section className={styleCSS.AllProduct}>
+        <div className={styleCSS.NavBarPage}>
+          <NavBar />
+        </div>
+        <div className={styleCSS.Right}>
+        Product
+        </div>
        </section> 
     </>
   );

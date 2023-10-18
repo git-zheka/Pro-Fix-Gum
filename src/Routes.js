@@ -7,9 +7,9 @@ import Using from "./components/using/Using";
 import WhyUs from "./components/whyus/WhyUs";
 import Header from './components/header/Header'
 import About from './components/aboutProduct/About'
-import Admin from "./components/Admin/Admin";
-import Login from "./components/login/Login";
-import Registration from "./components/registration/Registration";
+import Admin from "./pages/Admin/Admin";
+import Login from "./pages/login/Login";
+import Registration from "./pages/registration/Registration";
 
 
 export default function Rout() {

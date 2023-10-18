@@ -3,10 +3,6 @@ import { useState, useEffect } from 'react';
 
 import NavBar from './NavBar'
 
-import Title from '../title/Title'
-import {Link} from 'react-router-dom'
-
-import { apiURL } from '../../api';
 
 export default function Admin() {
   const [products, setProducts] = useState([]);
@@ -35,8 +31,13 @@ export default function Admin() {
 
   return (
     <>
-       <section className={styleCSS.Admin}>
+       <section className={styleCSS.AllUser}>
+        <div className={styleCSS.NavBarPage}>
           <NavBar />
+        </div>
+        <div className={styleCSS.Right}>
+          
+        </div>
        </section> 
     </>
   );

@@ -5,7 +5,7 @@ import BuyCards from './buyCards.module.scss'
 import Card from './components/Card';
 import Arrow from '../../media/Arrow.svg'
 
-import { apiURL } from '../../api';
+import { BuyCardsAPI } from '../../api';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
@@ -13,19 +13,7 @@ function BuyCars(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(apiURL, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Помилка при завантажені.');
-        }
-      })
+    BuyCardsAPI()
       .then(data => {
         setProducts(data);
       })

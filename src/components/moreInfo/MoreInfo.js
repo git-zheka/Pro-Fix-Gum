@@ -2,7 +2,7 @@ import StyleCSS from './moreinfo.module.scss'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { apiURL } from '../../api';
+import { apiURL, apiUrlProducts, MoreInfoAPI } from '../../api';
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -13,29 +13,12 @@ export default function MoreInfo() {
 
     let scene, camera, renderer;
     useEffect(() => {
-        fetch(`${apiURL}/${id}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      MoreInfoAPI(id)
+      .then(product => {
+        setProduct(product)
       })
-        .then(response => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error('Помилка при завантаженні.');
-          }
-        })
-        .then(data => {
-            setProduct(data);
-            window.scrollTo(0, 0); // Прокрутити сторінку вгору
-        })
-        .catch(error => {
-          console.error(error);
-        });
-
     }, []);
-
+    window.scrollTo(0, 0);
 
     // useEffect (() => {
     //   scene = new THREE.Scene();

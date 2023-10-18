@@ -1,7 +1,7 @@
 import styleCSS from './style.module.scss'
 import Box from './componets/Box'
 import { Link } from 'react-router-dom';
-import { apiURL } from '../../api'
+import {  ProductsAPI } from '../../api'
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Close from '../../media/Close.svg'
@@ -13,27 +13,13 @@ function Products(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(apiURL, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Помилка при завантаженні.');
-        }
-      })
+      ProductsAPI()        
       .then(data => {
         setProducts(data);
       })
-      .catch(error => {
-        console.error(error);
-      });
   }, []);
 
+  
   const isOpenProducts = useSelector(state => state.isProducts); 
   console.log(isOpenProducts)
 

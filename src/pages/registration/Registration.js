@@ -19,7 +19,7 @@ function Registration() {
             <div className={styleCSS.btnReg}>Zapisać się</div>
             
             <p1>Login lub hasło są nieprawidłowe</p1>
-            <p>Masz już konto osobiste?<Link to=''> Zalogować się</Link></p>
+            <p>Masz już konto osobiste?<Link to=''>Zalogować się</Link></p>
         </div>
     </section>
     </>
