@@ -1,23 +1,18 @@
 import StyleCSS from './basket.module.scss';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 import Close from '../../media/Close.svg';
 import img from '../../media/TreangleSlider.svg';
 
-import { useEffect } from 'react';
 import BoxGoods from './components/BoxGoods';
 
 import { connect } from 'react-redux';
-
 import { useSelector } from "react-redux"
 
 
 const Basket = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const isOpen = useSelector(state => state.isOpen);
-
-
-  console.log(isOpen);
 
 
   const initialGoods = [
